@@ -84,7 +84,7 @@ function event(name, payload = {}) {
         return resolve({
           data: {},
           status: 200,
-          statusText: 'Sucess',
+          statusText: 'Success',
           headers: {},
           settings,
         });
@@ -92,7 +92,7 @@ function event(name, payload = {}) {
     };
   }
 
-  return axios('https://v.shopify.com/slate/track', axiosConfig);
+  return new Promise(resolve => resolve(true))
 }
 
 module.exports = {
